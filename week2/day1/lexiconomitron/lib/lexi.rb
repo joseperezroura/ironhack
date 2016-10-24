@@ -8,7 +8,10 @@ end
 def reverse_words(array)
 
 
-	new_array = array.map(&:reverse!)
+	# new_array = array.map(&:reverse!)
+	new_array = array.map do |x| 
+	x.reverse 
+	end
 
 	no_t_array = new_array.map do |word|
 		word.downcase.gsub("t", "")
