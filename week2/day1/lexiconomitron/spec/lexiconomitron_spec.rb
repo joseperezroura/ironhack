@@ -21,6 +21,10 @@ RSpec.describe Lexiconomitron do
        expect(@lexi.reverse_words(["This", "is", "a", "boring", "test"])).to eq(["sih", "si", "a", "gnirob", "se"])
  	end
 
+	it "removes all the words from the new array except the first and last word" do 
+       expect(@lexi.reverse_words(["sih", "si", "a", "gnirob", "se"])).to eq(["sih", "se"])
+ 	end
+
 
 
 end

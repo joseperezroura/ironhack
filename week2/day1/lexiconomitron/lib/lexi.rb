@@ -21,10 +21,10 @@ def reverse_words(array)
 	end
 	 
 	no_t_array
-	 # third_array = []
-	 # third_array.push(no_t_array[0])
-	 # third_array.push(no_t_array[-1])
-	 # third_array
+	third_array = []
+	third_array.push(no_t_array[0])
+	third_array.push(no_t_array[-1])
+	third_array
 
 end
 
