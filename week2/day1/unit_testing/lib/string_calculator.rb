@@ -1,5 +1,5 @@
 class StringCalculator
-	def add(x)
+	def add(x = "")
 		x.gsub!("$",",")
 		x
 		y = x.split(",").map { |x| x.to_i }
