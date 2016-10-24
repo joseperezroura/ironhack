@@ -1,7 +1,7 @@
 class StringCalculator
 	def add(x = "")
 		x.gsub!("$",",")
-		x
+		p x
 		y = x.split(",").map { |x| x.to_i }
 		p y	
 		sum = 0
