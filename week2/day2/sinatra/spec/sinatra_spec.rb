@@ -10,17 +10,27 @@ RSpec.describe Task do
 	describe "#task" do 
 
 		it "completed? is true" do		
-		expect(task.completed?("Buy Milk")).to eq(false) 
+		expect(task.completed?).to eq(false) 
 		end
 		
-		it "allows you to delete a task" do		
-		
+		it "completed! is true" do		
+		expect(task.completed!).to eq(true) 
 		end
-		it "allows you to update tasks" do		
-		
-		end
-	
 
+		it "make_incomplete? is true" do		
+		expect(task.make_incomplete?).to eq(true) 
+		end
+
+
+
+		# it "allows you to delete a task" do		
+		
+		# end
+		# it "allows you to update tasks" do		
+		
+		# end
+	
+end
 end		
 
 # task = Task.new("Buy the milk")

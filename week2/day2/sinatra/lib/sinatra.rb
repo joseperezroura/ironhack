@@ -9,12 +9,27 @@ class Task
         @id = @@current_id
         @@current_id += 1
         @completed = false
+        @make_incomplete = true
     
     end  
 
     def completed?
 
-    @completed = true  
+    @completed  
+
+	end
+
+	def completed!
+
+    @completed = true
+
+	end
+
+	def make_incomplete?
+
+	@make_incomplete = true
+	else
+		false
 
 	end
 
