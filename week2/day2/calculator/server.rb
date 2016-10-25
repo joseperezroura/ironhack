@@ -35,7 +35,7 @@ end
 post "/calculate_multiply" do
   first = params[:first_number].to_f
   second = params[:second_number].to_f
-  result = first + second
+  result = first * second
   "#{first} * #{second} = #{result}"
 end
 
