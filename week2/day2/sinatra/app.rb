@@ -18,3 +18,12 @@ get "/about" do
 	
 end
 
+get "/best_madmax" do 
+
+	@movies = ["Mad Max", "Thunderdome", "Fury Road", "Road Warrior"]
+	
+	erb(:best_madmax)
+
+end
+
+
