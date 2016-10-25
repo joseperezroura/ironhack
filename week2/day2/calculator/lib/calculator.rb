@@ -3,24 +3,24 @@ class Calculator
 
 	def add(x, y)
 
-		z = x + y
-		z
+		x + y
+		
 	end
 
 	def subtract(x, y)
-		z = x - y
+		x - y
 
 	end
 
 	def multiply(x, y)
 
-		z = x * y
+		x * y
 
 	end
 
 	def divide(x, y)
 
-		z = x / y
+		x / y
 
 	end
 

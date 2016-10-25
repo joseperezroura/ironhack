@@ -1,6 +1,8 @@
 # server.rb
 require "sinatra"
 
+require_relative("lib/calculator.rb")
+
 get "/" do
   erb(:home)
 end
@@ -9,27 +11,35 @@ get "/functions" do
   erb(:functions)
 end
 
+
+
 post "/calculate" do
-  first = params[:first_number].to_f
-  second = params[:second_number].to_f
+  @first_number = params[:first_number].to_f
+  @second_number = params[:second_number].to_f
   
-  operation = params["operation"] # => "add, subtract, multiply, divide"
+  operation = params[:operation] # => "add, subtract, multiply, divide"
   calc = Calculator.new
 
   if params[:operation] == "add"
-  	result = calc.add(first, second)
+  	@operation = "+"
+  	@result = calc.add(params[:first_number].to_f, params[:second_number].to_f)
   elsif params[:operation] == "subtract"
-  	result = calc.subtract(first, second)
+  	@operation = "-"
+  	@result = calc.subtract(@first_number, @second_number)
   elsif params[:operation] == "multiply"
-  	result = calc.multiply(first, second)
+  	@operation = "*"
+  	@result = calc.multiply(@first_number, @second_number)
   else params[:operation] == "divide"
-  	result = calc.divide(first, second)
-  end
-  	
-  "#{result}"
-  	
+  	@operation = "/"
+  	@result = calc.divide(@first_number, @second_number)
+ 
+   erb(:calculate)
 
+ end
+
+ # calc.add(params[:number1].to_f,params[:number2].to_f)
   
+
   # result = calc.add(first, second)
   # result = calc.subtract(first, second)
   # result = calc.multiply(first, second)
