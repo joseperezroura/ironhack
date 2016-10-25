@@ -1,9 +1,20 @@
 require "sinatra"
 
 get "/" do 
-	"My first Sinatra app."
+
+	erb(:home)
+	
 end
 
 get "/hi" do 
-	"Hello, world!"
+	
+	erb(:hipage)
+
 end
+
+get "/about" do 
+
+	erb(:about)
+	
+end
+
