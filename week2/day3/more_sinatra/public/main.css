@@ -1,0 +1,14 @@
+
+h2 {
+    color: white;
+    text-align: center;
+}
+
+header {
+  font: 15px arial, sans-serif;
+  font-size: 20px;
+}
+footer {
+  color: navy; 
+  font-size: 15px;
+}

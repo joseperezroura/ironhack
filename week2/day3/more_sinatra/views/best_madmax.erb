@@ -1,0 +1,16 @@
+<head>
+<link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+
+<header><h1> Jose's Site </h1></header>
+
+<h2> Jose's Favorite Mad Max Movie </h2>
+
+<img src="/furyroad.gif">
+
+<ul>
+<% @movies.each do |my_madmax| %>
+	<li> <%= my_madmax %> </li>
+	<% end %>
+</ul>
