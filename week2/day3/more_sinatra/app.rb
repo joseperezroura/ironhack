@@ -2,6 +2,8 @@
 
 require "sinatra"
 require "sinatra/reloader" if development?
+require "pry" if development?
+
 
 
 get "/" do 
@@ -26,8 +28,9 @@ get "/best_madmax" do
 
 	@movies = ["Mad Max", "Thunder Dome", "Fury Road", "Road Warrior"]
 	
-	erb(:best_madmax)
 
+	erb(:best_madmax)
+# binding.pry
 end
 
 get "/blah" do 
