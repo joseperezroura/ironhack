@@ -22,7 +22,7 @@ post "/calculate" do
 
   if params[:operation] == "add"
   	@operation = "+"
-  	@result = calc.add(params[:first_number].to_f, params[:second_number].to_f)
+  	@result = calc.add(@first_number, @second_number)
   elsif params[:operation] == "subtract"
   	@operation = "-"
   	@result = calc.subtract(@first_number, @second_number)

@@ -20,7 +20,7 @@ end
 
 get "/best_madmax" do 
 
-	@movies = ["Mad Max", "Thunderdome", "Fury Road", "Road Warrior"]
+	@movies = ["Mad Max", "Thunder Dome", "Fury Road", "Road Warrior"]
 	
 	erb(:best_madmax)
 
