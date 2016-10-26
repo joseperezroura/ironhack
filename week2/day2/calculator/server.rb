@@ -33,7 +33,7 @@ post "/calculate" do
   	@operation = "/"
   	@result = calc.divide(@first_number, @second_number)
  
-   erb(:calculate)
+   erb(:result)
 
  end
 
