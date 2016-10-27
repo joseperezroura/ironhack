@@ -1,15 +1,15 @@
 class Task
-    attr_reader(:content, :id, :completed, :created_at, :updated_at)
+    attr_reader(:content, :id, :completed, :created_at)
 
     @@current_id = 1
 
     def initialize(content)
         @content = content
-        @id = @@current_id
-        @@current_id += 1
         @completed = false
         @created_at = Time.now
-        @updated_at = nil
+        @id = @@current_id
+        @@current_id += 1
+      
     end
 
     def completed?
@@ -17,20 +17,28 @@ class Task
     end
 
     def complete!
-    	@complete = true
+    	@completed = true
     end
 
     def make_incomplete!
     	@complete = false
     end
 
-    def created_at
-        @created_at
+    def make_delete
+
+        @content = nil 
+
+        @completed = nil
+
     end
 
-    def update_content!(new_content)
-        @updated_at = Time.now
-        @content = new_content
-    end
+    # def created_at
+    #     @created_at
+    # end
+
+    # def update_content!(new_content)
+    #     @updated_at = Time.now
+    #     @content = new_content
+    # end
 
 end

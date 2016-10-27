@@ -22,10 +22,14 @@ class TodoList
 	end
 
 	def find_task_by_id(idnum)
-		if @tasks[idnum] == nil
-			nil
-		else
-		puts @tasks[idnum].content
+        @tasks.each do |x|
+        if x.id == idnum 
+        
+        return   x
+        
+        end
+		
+	
 		end
 	end
 end

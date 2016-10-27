@@ -7,23 +7,19 @@ require_relative("lib/todoList.rb")
 
 my_list = TodoList.new
 
-task1 = Task.new("Buy the milk")
-task2 = Task.new("Do other stuff")
+task1 = Task.new("Buy milk")
+task2 = Task.new("Walk dog")
 
 my_list.add_task(task1)
 my_list.add_task(task2)
 
-
-
-
-enable(:sessions)
+# enable(:sessions)
 
 get "/" do 
 	
 @tasks = my_list.tasks
 
-
-	erb(:home)
+erb(:home)
 	
 end
 
@@ -39,20 +35,40 @@ blah = Task.new(params[:content])
 
 my_list.add_task(blah)
 
+	redirect("/")
+
+end
+
+get "/completed" do 
+
+	erb(:home)
+
+end
+
+post "/completed" do 
+	the_id = params[:whatever].to_i
+	x = my_list.find_task_by_id(the_id)
+
+	x.complete!
 
 	redirect("/")
 
 end
 
-post "/completed" do 
+get "/deleted" do 
 
-blah = Task.new(params[:completed])
-
-my_list.complete!(blah)
-
-redirect("/")
+	erb(:home)
 
 end
 
+post "/deleted" do 
+	the_id = params[:whatever_delete].to_i
+	x = my_list.find_task_by_id(the_id)
+
+	x.make_delete
+
+	redirect("/")
+
+end
 
 

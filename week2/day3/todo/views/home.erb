@@ -9,10 +9,19 @@
 <ul>
 <% @tasks.each do |task| %>
 <li>
-<%= task.content %> <button type="button" name="completed">task complete</button>
+<%= task.content %> &nbsp; <%= task.completed? %>
+<form action="/completed" method="post">
+<input type="hidden" name = "whatever" value = "<%= task.id %>">
+<button type="submit" name="completed" style="margin: 10px;">task complete</button>
+</form>
 </li>
 
+<form action="/deleted" method="post">
+<input type="hidden" name = "whatever_delete" value = "<%= task.id %>">
+<button type="submit" name="completed" style="margin: 10px;">delete task</button>
+</form>
 <% end %>
+
 </ul>
 
  <a href="/new_task"> Add Task </a>
