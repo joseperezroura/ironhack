@@ -1,5 +1,5 @@
 class Task
-    attr_reader(:content, :id, :completed,:updated_at)
+    attr_reader(:content, :id, :completed, :created_at, :updated_at)
 
     @@current_id = 1
 
@@ -16,7 +16,7 @@ class Task
     	return @completed
     end
 
-    def completed!
+    def complete!
     	@complete = true
     end
 

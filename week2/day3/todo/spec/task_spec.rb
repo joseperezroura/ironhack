@@ -1,5 +1,5 @@
 
-require_relative("../lib/scenarios.rb")
+require_relative("../lib/task.rb")
 
 RSpec.describe Task do 
 

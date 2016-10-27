@@ -15,19 +15,35 @@ my_list.add_task(task2)
 
 
 
+
 enable(:sessions)
 
 get "/" do 
 	
+@tasks = my_list.tasks
+
+
 	erb(:home)
 	
 end
 
+get "/new_task" do 
 
+	erb(:new_task)
 
-get "/about" do 
-
-	erb(:about)
-	
 end
+
+post "/add_new_task" do 
+
+blah = Task.new(params[:content])
+
+my_list.add_task(blah)
+
+
+	redirect("/")
+
+end
+
+
+
 
