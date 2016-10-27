@@ -44,6 +44,15 @@ my_list.add_task(blah)
 
 end
 
+post "/completed" do 
+
+blah = Task.new(params[:completed])
+
+my_list.complete!(blah)
+
+redirect("/")
+
+end
 
 
 
