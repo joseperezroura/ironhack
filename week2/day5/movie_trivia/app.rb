@@ -1,6 +1,8 @@
+require "bundler/setup"
 require "sinatra"
-require "sinatra/reloader"
+require "sinatra/reloader" if development?
 require "imdb"
+require_relative("movie.rb")
 
 get "/" do 
 	erb :home
@@ -11,10 +13,15 @@ get "/search_results" do
 	
  	the_search = Imdb::Search.new(params[:movie_term])
 
-	@movies = the_search.movies
+	movies = the_search.movies
 
-	puts @movies.inspect
+
+	filtered_movies = MovieTrivia.new(movies)
+
+	@movies = filtered_movies.filter_movies
 	erb :results
+
+
 
 end
 
