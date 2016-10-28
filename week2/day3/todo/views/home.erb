@@ -9,7 +9,7 @@
 <ul>
 <% @tasks.each do |task| %>
 <li>
-<%= task.content %> &nbsp; <%= task.completed? %>
+<%= task.content %> &nbsp; Completed: <%= task.completed? %>
 <form action="/completed" method="post">
 <input type="hidden" name = "whatever" value = "<%= task.id %>">
 <button type="submit" name="completed" style="margin: 10px;">task complete</button>
