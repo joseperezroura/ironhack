@@ -19,6 +19,8 @@ get "/search_results" do
 	filtered_movies = MovieTrivia.new(movies)
 
 	@movies = filtered_movies.filter_movies
+	@random_movie = @movies.sample
+	
 	erb :results
 
 

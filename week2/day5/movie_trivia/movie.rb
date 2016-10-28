@@ -1,5 +1,6 @@
 class MovieTrivia
 
+
 	def initialize(search_results)
 		@movies=search_results
 	end 

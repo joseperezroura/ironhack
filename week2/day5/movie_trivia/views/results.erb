@@ -1,9 +1,16 @@
+<h2>Which movie came out in <%= @random_movie.year %>?</h2>
+
 
 <% @movies.each do |movie| %>
 
+<% if @random_movie == movie %>
 
-<img src="<%= movie.poster %>" alt="Smiley face" height="200" width="auto">
+
+<img src="<%= movie.poster %>" onclick='alert("Right!")' alt="" height="200" width="auto">
+<% else %>
+<img src="<%= movie.poster %>" onclick='alert("Wrong!")' alt="" height="200" width="auto">
 
 
+<% end %>	
 
 <% end %>
