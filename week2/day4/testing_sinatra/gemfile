@@ -6,3 +6,5 @@ gem "rack"
 gem "rack-test"
 gem "sinatra-contrib"
 
+gem "guard"
+gem "guard-rspec"
