@@ -1,17 +1,43 @@
+.newreleases{
+	font-size: 35px;
+	font-weight: bold;
+}
+
 
 .movieposter {
 
   	display: inline;
-    width: 100px;
+    width: 70px;
   	padding: 25px;
   	margin: 13px; 
-  	background-color: "white"   
-
 }
-/*div.background {
-  background: url(images/family.jpg) repeat;
-  border: 2px solid black;
-}*/
+.button1 {
+    background-color: red; 
+    border: none;
+    color: white;
+    padding: 15px 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+  	top: 50px;
+  	right: 100px;
+}
+.button2 {
+    background-color: blue; 
+    border: none;
+    color: white;
+    padding: 15px 52px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    position: absolute;
+  	top: 370px;
+  	right: 450px;
+  	z-index: 3;
+}
 
 div.transbox {
   margin: 80px;
@@ -37,7 +63,7 @@ div.transbox p {
     top: 0;
     left: 0;
     z-index: -1;
-    background: rgb(38,38,38)
+    background-color: rgb(38,38,38);
 }
 .logo
 {
@@ -48,17 +74,19 @@ div.transbox p {
 
 p {
 
-	margin-top: 150px;
+	margin-top: 60px;
 	margin-left: 90px
 
 }
 footer {
 
 	
-    background-color: "black";
+    background-color: black;
 	border-style: solid;
-	border-color: "black";
-	padding: 50px;
+	border-color: black;
+	padding: 20px;
+
+
 	
 }
 
