@@ -1,0 +1,19 @@
+body {
+    background-color: lightblue;
+}
+h1 {
+    color: white;
+    text-align: center;
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+header {
+  font: 15px arial, sans-serif;
+  font-size: 20px;
+}
+footer {
+  color: navy; 
+  font-size: 15px;
+}
