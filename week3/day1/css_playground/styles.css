@@ -1,0 +1,34 @@
+.blue {
+	background-color: blue;
+	border-style: solid;
+	border-color: red;
+	margin: 10px;
+}
+
+.box#red {
+	background-color: red; 
+	border-style: solid;
+	border-color: blue;
+	margin: 10px;
+}
+
+.green#top {
+	
+	background-color: green; 
+	margin: 10px;
+	position: absolute;
+    left: 350px;
+    top: 350px;
+}
+
+.blue#bottom {
+
+	position: absolute;
+    left: 500px;
+    top: 400px;
+}
+
+h3 {
+
+	padding: 20%
+}
