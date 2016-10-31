@@ -1,3 +1,9 @@
+@font-face{
+	font-family: proximaNova;
+	src: url(fonts/ProximaNova-Reg.otf);
+	font-weight: normal;
+}
+
 .newreleases{
 	font-size: 35px;
 	font-weight: bold;
@@ -19,20 +25,20 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
   	top: 50px;
   	right: 100px;
 }
 .button2 {
-    background-color: blue; 
+    background-color: rgb(17, 131, 202); 
     border: none;
     color: white;
     padding: 15px 52px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 20px;
     position: absolute;
   	top: 370px;
   	right: 450px;
@@ -41,21 +47,22 @@
 
 div.transbox {
   margin: 80px;
-  background-color: #000000;
+  background-color: rgba(0,0,0,0.9);
   border: 1px solid black;
-  opacity: 0.7;
-  filter: alpha(opacity=80); 
+  opacity: 0.8;
   position: absolute;
   top: 100px;
-  left: 100px;
+  left: 110px;
 }
 
 div.transbox p {
   margin: 50px;
   padding: 30px;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 40px;
-  color: #ffffff;
+  color: white;
+
+	
 }
 
 .family   {
@@ -76,7 +83,6 @@ p {
 
 	margin-top: 60px;
 	margin-left: 90px
-
 }
 footer {
 
@@ -85,11 +91,12 @@ footer {
 	border-style: solid;
 	border-color: black;
 	padding: 20px;
-
-
 	
 }
 
 body {
+	margin: 0px;
+	padding: 0px;
 	background-color: "white";
+	font-family: "ProximaNova"
 }
