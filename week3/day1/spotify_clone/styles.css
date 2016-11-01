@@ -1,0 +1,25 @@
+body
+{
+    width: 100%;
+
+}
+
+.navheader
+{
+	z-index: 3;
+	margin-left: 700px;
+
+}
+
+.landing
+{
+	margin-top: 10px;
+}
+
+.middleicons {
+
+  	display: inline;
+    width: 70px;
+  	padding: 65px;
+  	margin-right: 30px; 
+}
