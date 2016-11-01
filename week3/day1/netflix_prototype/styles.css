@@ -14,19 +14,6 @@
 	font-weight: bold;
 }
 
-.newreleases{
-	font-size: 35px;
-	font-weight: bold;
-}
-
-
-.movieposter {
-
-  	display: inline;
-    width: 70px;
-  	padding: 25px;
-  	margin: 13px; 
-}
 .button1 {
     background-color: red; 
     border: none;
@@ -40,13 +27,13 @@
   	top: 50px;
   	right: 100px;
 }
+
 .button2 {
     background-color: rgb(17, 131, 202); 
     border: none;
     color: white;
     padding: 15px 30px;
     text-align: center;
-    text-decoration: none;
     display: inline-block;
     font-size: 20px;
     position: absolute;
@@ -70,9 +57,7 @@ div.transbox p {
   padding: 30px;
   font-weight: 900;
   font-size: 50px;
-  color: white;
-
-	
+  color: white;	
 }
 
 .family   {
@@ -82,6 +67,7 @@ div.transbox p {
     z-index: -1;
     background-color: rgb(38,38,38);
 }
+
 .logo
 {
     position: absolute;
@@ -89,19 +75,31 @@ div.transbox p {
     left: 40px;
 }
 
+.newreleases{
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.movieposter {
+
+  	display: inline;
+    width: 70px;
+  	padding: 25px;
+  	margin: 17px; 
+}
+
 p {
 
 	margin-top: 60px;
 	margin-left: 90px
 }
-footer {
 
+footer {
 	
     background-color: black;
 	border-style: solid;
 	border-color: black;
-	padding: 20px;
-	
+	padding: 20px;	
 }
 
 body {
