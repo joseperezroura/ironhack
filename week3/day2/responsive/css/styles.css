@@ -1,0 +1,31 @@
+body,
+html,
+.villain-header {
+	height: 100%;
+}
+.villain-header {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: purple;
+
+	background-image: url(https://media4.giphy.com/media/lEtYK7t0GBgmQ/200.gif#4);
+	color: purple;
+}
+
+@media screen and (min-width: 768px) {
+	.villain-header{
+		background-image: url(https://media3.giphy.com/media/LQx7NoYAJIozS/200.gif#37)
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.villain-header{
+		background-image: url(https://media1.giphy.com/media/ORHf4lCKNv5ra/200.gif#1)
+	}
+}
+@media screen and (min-width: 1200px) {
+	.villain-header{
+		background-image: url(https://media0.giphy.com/media/p7GG8eAdgJZS0/200.gif#7)
+	}
+}
