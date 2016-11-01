@@ -11,12 +11,18 @@ code {
 header,
 section {
 	position: absolute;
-	top: 550px;
-	right: 550px; 
+	top: 400px;
+	right: 400px; 
 }
+.image-wrapper{
+	overflow: auto;
+}
+
+
+
 img {
-	width: 300px;
-	height: 300px
+	width: 350px;
+	height: 350px
 	float: top;
 }
 aside 
