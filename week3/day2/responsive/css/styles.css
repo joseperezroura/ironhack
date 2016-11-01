@@ -12,19 +12,34 @@ html,
 	background-image: url(https://media4.giphy.com/media/lEtYK7t0GBgmQ/200.gif#4);
 	color: purple;
 }
-
+h1 {
+	font-size: 25px;
+}
 @media screen and (min-width: 768px) {
+	
+	h1 {
+	font-size: 25px;
+	color: orange;
+}
 	.villain-header{
 		background-image: url(https://media3.giphy.com/media/LQx7NoYAJIozS/200.gif#37)
 	}
 }
 
 @media screen and (min-width: 992px) {
+		h1 {
+	font-size: 35px;
+	color: green;
+}
 	.villain-header{
 		background-image: url(https://media1.giphy.com/media/ORHf4lCKNv5ra/200.gif#1)
 	}
 }
 @media screen and (min-width: 1200px) {
+	h1 {
+	font-size: 45px;
+	color: grey;
+}
 	.villain-header{
 		background-image: url(https://media0.giphy.com/media/p7GG8eAdgJZS0/200.gif#7)
 	}
