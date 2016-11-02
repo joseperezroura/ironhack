@@ -9,3 +9,14 @@ countries.each do |a_country|
 end
 
 puts " "
+
+uppercase_countries = countries.map do |a_country|
+	a_country.uppercase_countries
+end
+
+puts "COUNTRIES REPRESENTED IN THIS ROOM (IN UPPERCASE):"
+puts"---------------------------------------------------"
+
+uppercase_countries.each do |a_country|
+	puts "SOMEO OF US ARE FROM #{a_country}"
+end
