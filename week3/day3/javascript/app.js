@@ -29,7 +29,10 @@ console.log(" ");
 var uppercaseCountries = countries.map(function (aCountry) {
 	return aCountry.toUpperCase();
 });
+
+uppercaseCountries.forEach(function (uppercaseCountries) {
 console.log("SOME OF US ARE FROM " + uppercaseCountries + "!!");
+});
 
 // puts"COUNTRIES REPRESENTED IN THIS ROOM (IN UPPERCASE):"
 // puts"---------------------------------------------------"
