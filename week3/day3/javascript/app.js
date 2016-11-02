@@ -55,5 +55,5 @@ console.log("SOME OF US ARE FROM " + uppercaseCountries + "!!");
 // puts"---------------------------------------------------"
 
 // uppercase_countries.each do |a_country|
-// 	puts "SOMEO OF US ARE FROM #{a_country}"
+// 	puts "SOME OF US ARE FROM #{a_country}"
 // end
