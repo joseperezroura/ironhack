@@ -14,7 +14,8 @@ console.log("-----------------------------------");
 // 	puts "Some of us are from #{a_country}!!"
 // end
 countries.forEach(function (aCountry) {
-console.log("Some of us are from " + aCountry + "!!")
+console.log("Some of us are from " + aCountry + "!!");
+console.log(`Some of us are from ${aCountry}!!`)
 });
 
 // puts " "
