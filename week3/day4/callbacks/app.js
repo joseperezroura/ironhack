@@ -1,12 +1,32 @@
 "use strict";
 
+// fs is built in
+var fs = require("fs");
 var read = require("read");
 
 
 console.log("");
 console.log("START OF PROGRAM");
+//================================================================
 
 
+fs.readFile("./movies.txt", "utf8", function (error, contentsOfFile) {
+	console.log("error", error);
+	console.log("")
+	console.log("contents", contentsOfFile)
+
+
+	if (error) {
+		console.log("Oh No! There was a file error!")
+	}
+
+	else {
+	var moviesArray = contentsOfFile.split("\n");
+	console.log(moviesArray)
+	}
+});
+
+// =========================================================
 
 
 function displayName (firstArg, inputName) {
@@ -15,6 +35,9 @@ function displayName (firstArg, inputName) {
 
 
 read({ prompt: "What is your name?"}, displayName)
+
+// ===============================================================
+
 
 function after5Seconds () {
 	console.log("5 seconds");
