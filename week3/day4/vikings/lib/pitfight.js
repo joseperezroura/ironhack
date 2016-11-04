@@ -15,9 +15,9 @@ startFight(){
 			console.log(`${this.viking1.name}'s health: ${vik1NewHealth}, ${this.viking2.name}'s health:${vik2NewHealth}`);
 		}
 		if (vik1NewHealth > vik2NewHealth) {
-    console.log(`${this.viking1.name} is the winner`)
+    console.log(`${this.viking1.name} survived this pit fight; ${this.viking2.name} is dead!`)
 } else { 
-    console.log(`${this.viking2.name} is the winner`)
+    console.log(`${this.viking2.name} survived this pit fight; ${this.viking1.name} is dead!`)
 }
 			
 	}
