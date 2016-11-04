@@ -1,4 +1,4 @@
-class Vikings {
+class Saxons {
 	constructor (name, health, strength) {
 		this.name = name;
 		this.health = health;
@@ -6,4 +6,4 @@ class Vikings {
 	}
 
 }
-module.exports = Vikings;
+module.exports = Saxons;
