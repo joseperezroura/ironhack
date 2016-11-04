@@ -13,16 +13,21 @@ startFight(){
 			vik1NewHealth -= this.viking2.strength;
 			vik2NewHealth -= this.viking1.strength;
 			console.log(`${this.viking1.name}'s health: ${vik1NewHealth}, ${this.viking2.name}'s health:${vik2NewHealth}`);
-		}
+													}
 		if (vik1NewHealth > vik2NewHealth) {
-    console.log(`${this.viking1.name} survived this pit fight; ${this.viking2.name} is dead!`)
-} else { 
+    function after5Seconds () {
+    	console.log(`${this.viking1.name} survived this pit fight; ${this.viking2.name} is dead!`)
+								}
+	setTimeout(after5Seconds, 5000);  
+		} 
+		else 
+		{ 
     console.log(`${this.viking2.name} survived this pit fight; ${this.viking1.name} is dead!`)
-}
+		}
 			
 	}
 
-}
+	}
 module.exports = PitFight;
 
 // pitfight () {

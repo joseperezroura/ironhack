@@ -13,12 +13,33 @@ var leif = new Vikings("Leif" , 1000, 3);
 
 var saxon = new Saxons(20, 4)
 
+// ======================================================================
+console.log ("Welcome to my epic fight between Vikings!")
+
+function after20Seconds () {
+fight1.startFight();
+// fight2.startFight();
+}
+setTimeout(after20Seconds, 20000);
+
+function after5Seconds () {
+console.log(`The great Thor and Leif will be fighting to the death!`)
+}
+
+setTimeout(after5Seconds, 5000);
 
 var fight1 = new PitFight(thor,leif);
-var fight2 = new PitFight(bjorn,gunnr);
+// var fight2 = new PitFight(bjorn,gunnr);
 
-fight1.startFight();
-fight2.startFight();
+
+// console.log("5 seconds");
+
+// setTimeout(function () {
+// console.log("2 seconds are up")
+// }, 2000);
+
+// fight1.startFight();
+// fight2.startFight();
 
 // var fight = new SaxonTown(thor,saxon);
 
