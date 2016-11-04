@@ -12,7 +12,7 @@ startFight(){
 		while (vik1NewHealth > 5 && vik2NewHealth > 5){
 			vik1NewHealth -= this.viking2.strength;
 			vik2NewHealth -= this.viking1.strength;
-			console.log(`${vik1NewHealth}, ${vik2NewHealth}`);
+			console.log(`${this.viking1.name}'s health: ${vik1NewHealth}, ${this.viking2.name}'s health:${vik2NewHealth}`);
 		}
 		if (vik1NewHealth > vik2NewHealth) {
     console.log(`${this.viking1.name} is the winner`)
@@ -21,9 +21,6 @@ startFight(){
 }
 			
 	}
-
-
-
 
 }
 module.exports = PitFight;

@@ -1,6 +1,5 @@
 class Saxons {
-	constructor (name, health, strength) {
-		this.name = name;
+	constructor (health, strength) {		
 		this.health = health;
 		this.strength = strength;
 	}
