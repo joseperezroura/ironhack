@@ -7,6 +7,8 @@ class PitFight {
 startFight(){
 		var vik1NewHealth = this.viking1.health;
 		var vik2NewHealth = this.viking2.health;
+		var vikingA = this.viking1;
+		var vikingB = this.viking2;
 
 
 		while (vik1NewHealth > 5 && vik2NewHealth > 5){
@@ -15,18 +17,19 @@ startFight(){
 			console.log(`${this.viking1.name}'s health: ${vik1NewHealth}, ${this.viking2.name}'s health:${vik2NewHealth}`);
 													}
 		if (vik1NewHealth > vik2NewHealth) {
-    function after5Seconds () {
-    	console.log(`${this.viking1.name} survived this pit fight; ${this.viking2.name} is dead!`)
-								}
-	setTimeout(after5Seconds, 5000);  
-		} 
+    		function after5Seconds () {
+		    	console.log(`${vikingA.name} survived this pit fight; ${vikingB.name} is dead!`)			
+			}			
+			setTimeout(after5Seconds, 5000);  	
+		} 	
 		else 
 		{ 
-    console.log(`${this.viking2.name} survived this pit fight; ${this.viking1.name} is dead!`)
-		}
-			
+		   function after5Seconds () {		
+		    console.log(`${vikingB.name} survived this pit fight; ${vikingA.name} is dead!`)
+		}	
+			setTimeout(after5Seconds, 5000);  
+		}			
 	}
-
 	}
 module.exports = PitFight;
 

@@ -1,12 +1,15 @@
 class SaxonTown {
-	constructor (viking, saxon) {
-		this.viking = viking;
-		this.saxon = saxon;
+	constructor (vikings, saxons) {
+		this.vikings = vikings;
+		this.saxons = saxons;
 	}
-
 startFight(){
-		var vikNewHealth = this.viking.health;
-		var saxonNewHealth = this.saxon.health;
+		
+	var randomViking = this.vikings[Math.floor(Math.random()*items.length)];
+	var randomSaxon = this.saxons[Math.floor(Math.random()*items.length)];
+
+		var vikNewHealth = this.vikings.health;
+		var saxonNewHealth = this.saxons.health;
 
 
 		while (vikNewHealth > 5 && saxonNewHealth > 5){
@@ -15,7 +18,7 @@ startFight(){
 			console.log(`${vikNewHealth}, ${saxonNewHealth}`);
 		}
 		if (vikNewHealth > saxonNewHealth) {
-    console.log(`${this.viking.name} is the winner`)
+    console.log(`${this.vikings.name} is the winner`)
 } else { 
     console.log(`the saxon is the winner`)
 }
@@ -23,4 +26,5 @@ startFight(){
 	}
 	
 }
+
 module.exports = SaxonTown;
