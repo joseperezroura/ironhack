@@ -10,12 +10,11 @@ def create
     
     @word_count = @text.split(" ").length
 
-    render "results"
+    x = @word_count * 0.22
 
-   
+    @y = x.round(2)
 
-
-  
+    render "results"  
   end
 end
 
