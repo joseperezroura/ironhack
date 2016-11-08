@@ -1,0 +1,17 @@
+
+
+<ul>
+
+	<% @projects.each do |one_project| %>
+
+	<% if one_project.description == nil %>
+	
+	<li><%= one_project.name %></li>
+
+	<% else %>
+
+	<li><%= one_project.name %>: <%= one_project.description %></li>
+
+	<% end %>
+<% end %>
+</ul>
