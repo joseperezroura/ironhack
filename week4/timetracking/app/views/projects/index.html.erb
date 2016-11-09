@@ -3,14 +3,17 @@
 <ul>
 
 	<% @projects.each do |one_project| %>
+	
+	<li> <%= link_to one_project.name, project_path(one_project) %> 
+
 
 	<% if one_project.description == nil %>
 	
-	<li><%= one_project.name %></li>
+	<% one_project.name %>
 
 	<% else %>
 
-	<li><%= one_project.name %>: <%= one_project.description %></li>
+	<% one_project.name %> <% one_project.description %></li>
 
 	<% end %>
 <% end %>
