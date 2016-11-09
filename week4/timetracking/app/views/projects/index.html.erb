@@ -16,6 +16,8 @@
 	<% one_project.name %> <% one_project.description %></li>
 
 	<% end %>
+<%= link_to('See time entries', project_time_entries_path(one_project)) %>
+
 <% end %>
 </ul>
 
