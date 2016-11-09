@@ -1,0 +1,7 @@
+<ul>
+<% @projects.each do |x| %>
+<li>
+<%= x.name %>: Address: <%= x.address %> Phone: <%= x.phone %> Email: <%= x.email %>
+</li>
+<%end%>
+</ul>
