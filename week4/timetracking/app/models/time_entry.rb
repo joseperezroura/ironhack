@@ -4,5 +4,4 @@ class TimeEntry < ApplicationRecord
 	validates :minutes, :numericality => true
 	validates :date, :presence => true
 	
-
 end

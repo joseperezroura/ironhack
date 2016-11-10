@@ -16,6 +16,7 @@ class TimeEntriesController < ApplicationController
 		@my_entry = @my_project.time_entries.new
 
 		render :new
+	end
 
 	def create
 		
@@ -37,6 +38,33 @@ class TimeEntriesController < ApplicationController
 
 		end
 	end
-end
+
+	def edit
+		@my_project = Project.find params[:project_id]
+
+		@my_entry = @my_project.time_entries.find params[:id]
+
+		render :edit
+
+	end
+
+	def update
+		@my_project = Project.find params[:project_id]
+
+		@my_entry = @my_project.time_entries.find params[:id]
+
+		if @my_entry.update(hours: params[:time_entry][:hours],
+			minutes: params[:time_entry][:minutes],
+			date: params[:time_entry][:date],
+			comments: params[:time_entry][:comments])
+			
+		redirect_to "/projects/#{@my_project.id}/time_entries"
+
+		else
+
+		render :edit
+
+		end
+	end
 end
 
