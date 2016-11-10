@@ -1,0 +1,12 @@
+<h1> Contacts </h1>
+
+<% @contacts.each do |contact| %>
+<ul>	
+<li>
+Name: <%= contact.name %> Address: <%= contact.address %> Phone: <%= contact.phone %> Email: <%= contact.email%>
+</li>
+</ul>
+<% end %>
+
+
+<li> <a href="/contacts/new"> Add a Contact </a> </li>
