@@ -3,7 +3,11 @@ class ConcertsController < ApplicationController
 	def index
 
 		@concerts = Concert.all
-							
+
+		@todays_concerts = @concerts.where(date: DateTime.now..DateTime.tomorrow)
+		
+		@this_months_concerts = @concerts.where(date: DateTime.tomorrow..DateTime.tomorrow + 30.days)
+		
 	render :index
 	
 	end
@@ -27,6 +31,9 @@ class ConcertsController < ApplicationController
 		@concerts.save
 
 		redirect_to concerts_path(@concerts)
+
+	
+
 
 	end
 
