@@ -11,7 +11,15 @@ class ConcertsController < ApplicationController
 	render :index
 	
 	end
+	
+	def show
 
+		@concerts = Concert.all
+		
+		render :show
+
+	end
+	
 	def new
 		
 		@concerts = Concert.new
