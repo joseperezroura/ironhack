@@ -1,13 +1,11 @@
 <h2> Concert Details </h2>
 
-<h3> <% @concerts.each do |x| %> </h3>
+<h3> <%= @concerts.name %> </h3>
 <ul>
-<li> Name: <%= x.venue %></li>
-<li> Venue: <%= x.venue %></li>
-<li> City: <%= x.city %> </li>
-<li> Date: <%= x.date %> </li>
-<li> Price: <%= x.price %> </li>
-<li> Description: <%= x.description %> </li>
+<li> Name: <%= @concerts.name %></li>
+<li> Venue: <%= @concerts.venue %></li>
+<li> City: <%= @concerts.city %> </li>
+<li> Date: <%= @concerts.date %> </li>
+<li> Price: <%= @concerts.price %> </li>
+<li> Description: <%= @concerts.description %> </li>
 </ul>
-
-<% end %>

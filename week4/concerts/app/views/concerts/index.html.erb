@@ -4,11 +4,7 @@
 <ul>
 
 
-<% @concerts.each do |one_concert| %>
-<li>
-Name: <%= one_concert.name %> Venue: <%= one_concert.venue %> City: <%= one_concert.city %> Date: <%= one_concert.date %> Price: <%= one_concert.price %> Description: <%= one_concert.description %>	
-</li>
-<% end %> 
+
 
 <% @todays_concerts.each do |one_concert| %>
 <li>
@@ -17,14 +13,13 @@ Name: <%= one_concert.name %> Venue: <%= one_concert.venue %> City: <%= one_conc
 </li>
 
 <% end %>
-<% @this_months_concerts.each do |one_concert| %>
-<%= link_to "#{one_concert.name}", concert_path(one_concert.id) %>
+<% @this_months_concerts.each do |x| %>
+<%= link_to "#{x.name}", concert_path(x.id) %>
 <br>    
     <% end %>
 
 
 </ul>
-
 
 
 

@@ -14,7 +14,7 @@ class ConcertsController < ApplicationController
 	
 	def show
 
-		@concerts = Concert.all
+		@concerts = Concert.find(params[:id])
 		
 		render :show
 
