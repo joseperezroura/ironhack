@@ -15,6 +15,8 @@ $(".empanadas").click(function () {
 
 $("#cookies").on("click", cookieMessage);
 
+
+
 function cookieMessage () { 
 	var cookieContent = `<div class="popup">
 						<h2>"Have some cookies."</h2>
@@ -29,6 +31,7 @@ function cookieMessage () {
 						</div>`;
 
 						$("body").after(cookieContent)
+						$(".js-pizza").empty()
 
 					}
 
