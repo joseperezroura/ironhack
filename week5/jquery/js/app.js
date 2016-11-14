@@ -3,6 +3,18 @@ console.log("CONSOLE LOG");
 $(document).ready(function () {
 
 
+$(".js-pizza").on("click", function () {
+	alert("PIZZA PIZZA")
+});
+
+$(".empanadas").click(function () {
+	alert("Empanada Time");
+});
+
+$("#cookies").on("click", cookieMessage);
+
+function cookieMessage () { alert("Have some cookies.")}
+
   $(".js-button-thing").on("click", function () {
     $("body").append(`<img src="images/unicorn1.gif">`);
   });
