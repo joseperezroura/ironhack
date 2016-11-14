@@ -41,18 +41,23 @@ function cookieMessage () {
 
   $(".js-change-unicorn").on("click", changeUnicorn);
 
-    var unicornCount = 1;
+    var unicornCount = 2;
 
   function changeUnicorn () {
   	unicornCount += 1;
-  	
+
   	if (unicornCount > 3) {
   		unicornCount = 1;
   	}
 
-  	$(".js-unicorn-image").attr("src", "images/unicorn3.gif");
+  	$(".js-unicorn-image").attr("src", `images/unicorn${unicornCount}.gif`);
   }
+ 
+                         
 
+$('#disappear').on('click', function(){
+  $('.playable').fadeToggle(2000);
+});
 
 
 
