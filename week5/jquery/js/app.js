@@ -4,19 +4,36 @@ $(document).ready(function () {
 
 
 $(".js-pizza").on("click", function () {
-	alert("PIZZA PIZZA")
+	$(".js-small").append("PIZZA PIZZA");
 });
 
 $(".empanadas").click(function () {
-	alert("Empanada Time");
+	$(".js-heading").after(`
+		<span>"Empanada Time</span>
+		<a href="#"> SEE MORE EMPANADAS </a>`);
 });
 
 $("#cookies").on("click", cookieMessage);
 
-function cookieMessage () { alert("Have some cookies.")}
+function cookieMessage () { 
+	var cookieContent = `<div class="popup">
+						<h2>"Have some cookies."</h2>
+
+						<p> Cookies are good for you.  Here's why:</p>
+
+						<ul>
+						<li> Cookies taste good </li>
+						<li> They have 0 calories </li>
+						<li> Cookies don't lie to you </li>
+						</ul>
+						</div>`;
+
+						$("body").after(cookieContent)
+
+					}
 
   $(".js-button-thing").on("click", function () {
-    $("body").append(`<img src="images/unicorn1.gif">`);
+    $("body").after(`<img src="images/unicorn1.gif">`);
   });
 
 
