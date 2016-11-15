@@ -1,18 +1,37 @@
+.jumbotron {
+	background-color: #808080;
+	color: #3333FF;
+	padding: 70px 25px;
+}
+
+.btn {
+	background-color: #808080;
+	color: #3333FF;
+	margin-top: 5px;
+}
+
+
 img {
 	height: 150px;
 	width: auto;
-	
+
 }
+
+
 
 body {
-	background-color: black;
-	color: #00ff00;
+	
+	color: #3333FF;
+	background-color: #E0E0E0 ;
 }
 
-button {
-	background-color: #606060;
-}
+
 
 input[type="text"] {
-    background-color: black;
+    color: #3333FF;
+}
+.js-artist-result{
+	display: inline-block;
+	float: left;
+	list-style: none;
 }

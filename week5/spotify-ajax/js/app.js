@@ -36,15 +36,16 @@ artistInfo.artists.items.forEach(function (x){
 
 	var artistItem = `
 	
-	<li>${x.name}<p>
+	<div>${x.name}<p>
 	
-	<img src="${x.images[0].url}"></li>`
+	<img src="${x.images[0].url}"></div>`
 
 	$(".js-artist-result").append(artistItem);
 
-};
-});
+		};
 
+	});
+// $(".js-artist-result").append(<div class="clear"></div>);
 }
 
 function handleError (errorThing) {
