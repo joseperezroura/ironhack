@@ -5,10 +5,59 @@ $(document).ready(function () {
 
 	$(".js-fetch-characters").on("click", fetchCharacters);
 	$(".js-ackbar-form").on("submit", saveAckbar);
-
+	$(".js-character-form").on("submit", saveCharacter)
 });
 
+function saveCharacter (eventThing) {
+	eventThing.preventDefault();
+	
+	var nameInput = $(".js-character-name").val();
 
+	if (nameInput === "") {
+		nameInput = "name";
+	}
+
+	var weaponInput = $(".js-character-weapon").val();
+
+	if (weaponInput === "") {
+		weaponInput = "weapon";
+	}
+
+	var occupationInput = $(".js-character-occupation").val();
+
+	if (weaponInput === "") {
+		weaponInput = "coder";
+	}
+
+	var characterInfo = {
+		name: nameInput,
+		occupation: occupationInput,
+		weapon: weaponInput,
+	};
+
+	$.ajax({
+		type: "POST",
+		url: "https://ironhack-characters.herokuapp.com/characters",
+		data: characterInfo,
+		success: showCharacter,
+		error: handleError,
+	});
+}
+
+
+function showCharacter (infoFromApi) {
+	console.log("Save Character success");
+	console.log(infoFromApi);
+}
+
+
+
+
+
+
+
+
+// ===================================================================/
 
 function saveAckbar (eventThing) {
 	eventThing.preventDefault();
@@ -19,9 +68,6 @@ function saveAckbar (eventThing) {
 	if (weaponInput === "") {
 		weaponInput = "Memes";
 	}
-
-
-
 
 	var ackbarInfo = {
 		name: "Admiral Ackbar",
@@ -44,6 +90,7 @@ function showAckbar (infoFromApi) {
 	console.log(infoFromApi);
 }
 
+// ==================================================/
 
 function fetchCharacters () {
 	$.ajax({
