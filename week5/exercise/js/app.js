@@ -12,11 +12,14 @@ var phrases = [
 function randomPhrase (){ 
 
 var x = phrases[Math.floor(phrases.length * Math.random())];
-  $("body").append(`${x}`);
-
+ 
+  $("p").html(`${x}`);
 
 };
 
 randomPhrase();
 
+$(".js-phrases").on("click", randomPhrase);
+
+ // $("body").append(`${x}`);
 });
