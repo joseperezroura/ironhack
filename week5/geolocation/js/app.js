@@ -4,8 +4,35 @@ $(document).ready(function () {
 
 console.log("The page has finished loading.")
 promptForLocation();
+beginWatch();
 
 });
+
+function beginWatch () {
+	if ("geolocation" in navigator) {
+		navigator.geolocation.watchPosition(watchSuccess, watchError);	
+	}
+}
+
+function watchSuccess (locInfo) {
+	console.log("Watch location:");
+	console.log(locInfo)
+
+	var watchItem = `
+	<li>
+	Latitude: ${locInfo.coords.latitude}
+	</li>
+	<li>
+	Longitude: ${locInfo.coords.longitude}
+	</li>`;
+	$(".js-watch-list").append(watchItem);
+}
+
+function watchError (errInfo) {
+	console.log("Watch errorInfo:");
+	console.log(errInfo)
+}
+
 
 function promptForLocation () {
 	if ("geolocation" in navigator) {
