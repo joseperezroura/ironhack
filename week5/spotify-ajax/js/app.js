@@ -54,6 +54,7 @@ artistInfo.artists.items.forEach(function (x){
 
 	});
 	$(".js-click").on("click", getAlbums)
+
 };
 
 function getAlbums () {
@@ -67,13 +68,27 @@ function getAlbums () {
 	});
 };
 
-function displayAlbum () {
-	console.log("success of get albums");
-	console.log(displayAlbum);
-
-}
 
 
+function displayAlbum(albumInfo) {
+	console.log(albumInfo);
+
+albumInfo.items.forEach(function (x){
+	console.log(x.name)
+	// console.log(x.id)
+	// if (x.images.length !== 0){
+
+	var albumItem = `
+	
+	<div>${x.name}<p>
+	
+	</div>`
+	   // };
+
+	$(".js-album-result").append(albumItem);
+	
+    });
+};
 function handleError (errorThing) {
 	console.log("Artist search error");
 	console.log(errorThing.responseText);
