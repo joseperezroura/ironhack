@@ -63,7 +63,7 @@ function showPositionInDom (locationInfo){
 	console.log(locationInfo);
 
 	$(".js-lat").html(locationInfo.coords.latitude);
-	$(".js-lng").html(locationInfo.coords.latitude);
+	$(".js-lng").html(locationInfo.coords.longitude);
 }
 
 function showError (errorInfo) {
