@@ -9,7 +9,12 @@ promptForLocation();
 
 function promptForLocation () {
 	if ("geolocation" in navigator) {
-navigator.geolocation.getCurrentPosition(showPositionInDom, showError);
+		var optionsThing = {
+			enableHighAccuracy: true,
+			timeout: 2000
+		};
+
+		navigator.geolocation.getCurrentPosition(showPositionInDom, showError, optionsThing);
 	}
 
 	else {
@@ -23,6 +28,8 @@ navigator.geolocation.getCurrentPosition(showPositionInDom, showError);
 		$("body").prepend(errorHtml)
 	}
 }
+
+
 
 function showPositionInDom (locationInfo){
 	console.log("Got position successfully.");
@@ -40,9 +47,14 @@ function showError (errorInfo) {
 		<div class="alert alert-danger" role="alert">
 		<strong> Sorry! </strong>
 		There was an error retrieving your position.
+		
+		<button class="btn btn-default js-try-again"> Try again </button>
 		</div>`;
 
 		$("body").prepend(positionErrorHtml);
+		$(".js-try-again").on("click", function(){
+			location.reload();
+		});
 }
 
 
