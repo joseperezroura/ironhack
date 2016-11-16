@@ -4,6 +4,7 @@ $(document).ready(function () {
 
 $(".js-artist-search-form").on("submit", getArtist);
 
+
 });
 
 
@@ -15,8 +16,10 @@ var artistInput = $(".js-artist-search").val();
 
 var searchInfo = {
 		q: artistInput,
-		type: "artist"		
+		type: "artist"
+
 	};
+
 $.ajax({
 		type: "GET",
 		url: "https://api.spotify.com/v1/search",
@@ -31,22 +34,45 @@ function displayArtist (artistInfo) {
 	console.log(artistInfo);
 
 artistInfo.artists.items.forEach(function (x){
+	// console.log(x.id)
 	if (x.images.length !== 0){
+
 
 
 	var artistItem = `
 	
 	<div>${x.name}<p>
 	
-	<img src="${x.images[0].url}"></div>`
+	<img data-id="${x.id}" src="${x.images[0].url}" class="js-click"></div>`
+
+
 
 	$(".js-artist-result").append(artistItem);
+	
 
 		};
 
 	});
-// $(".js-artist-result").append(<div class="clear"></div>);
+	$(".js-click").on("click", getAlbums)
+};
+
+function getAlbums () {
+	console.log($(this).data("id"))
+	var the_id = $(this).data("id")
+ $.ajax({
+		type: "GET",
+		url: `https://api.spotify.com/v1/artists/${the_id}/albums`,
+		success: displayAlbum,
+		error: handleError,
+	});
+};
+
+function displayAlbum () {
+	console.log("success of get albums");
+	console.log(displayAlbum);
+
 }
+
 
 function handleError (errorThing) {
 	console.log("Artist search error");

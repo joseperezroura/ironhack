@@ -1,12 +1,12 @@
 .jumbotron {
 	background-color: #808080;
-	color: #3333FF;
+	/*color: #3333FF;*/
 	padding: 70px 25px;
 }
 
 .btn {
 	background-color: #808080;
-	color: #3333FF;
+/*	color: #3333FF;*/
 	margin-top: 5px;
 }
 
@@ -21,14 +21,14 @@ img {
 
 body {
 	
-	color: #3333FF;
+/*	color: #3333FF;*/
 	background-color: #E0E0E0 ;
 }
 
 
 
 input[type="text"] {
-    color: #3333FF;
+  /*  color: #3333FF;*/
 }
 .js-artist-result{
 	display: inline-block;
