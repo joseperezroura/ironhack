@@ -1,23 +1,15 @@
 console.log("App JS Ready");
-
 $(document).ready(function () {
-
 $(".js-artist-search-form").on("submit", getArtist);
-
-
 });
-
 
 function getArtist (eventThing) {
 	eventThing.preventDefault();
 
-
 var artistInput = $(".js-artist-search").val();
-
 var searchInfo = {
 		q: artistInput,
 		type: "artist"
-
 	};
 
 $.ajax({
@@ -28,7 +20,6 @@ $.ajax({
 		error: handleError,
 	});
 }
-
 function displayArtist (artistInfo) {
 	console.log("success of get artist")
 	console.log(artistInfo);
@@ -37,24 +28,13 @@ artistInfo.artists.items.forEach(function (x){
 	// console.log(x.id)
 	if (x.images.length !== 0){
 
-
-
-	var artistItem = `
-	
-	<div>${x.name}<p>
-	
+	var artistItem = `	
+	<div>${x.name}<p>	
 	<img data-id="${x.id}" src="${x.images[0].url}" class="js-click"></div>`
-
-
-
 	$(".js-artist-result").append(artistItem);
-	
-
 		};
-
 	});
 	$(".js-click").on("click", getAlbums)
-
 };
 
 function getAlbums () {
@@ -67,7 +47,6 @@ function getAlbums () {
 		error: handleError,
 	});
 };
-
 function displayAlbum(albumInfo) {
 	console.log(albumInfo);
 
@@ -75,16 +54,13 @@ albumInfo.items.forEach(function (x){
 	console.log(x.name)
 	// console.log(x.id)
 	// if (x.images.length !== 0){
-
 	var albumItem = `
 	<ul>
 	${x.name}<p>
 	</ul>
 	`
 	   // };
-
-	$(".js-album-result").append(albumItem);
-	
+	$(".js-album-result").append(albumItem);	
     });
 };
 function handleError (errorThing) {
