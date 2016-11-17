@@ -68,8 +68,6 @@ function getAlbums () {
 	});
 };
 
-
-
 function displayAlbum(albumInfo) {
 	console.log(albumInfo);
 
@@ -79,10 +77,10 @@ albumInfo.items.forEach(function (x){
 	// if (x.images.length !== 0){
 
 	var albumItem = `
-	
-	<div>${x.name}<p>
-	
-	</div>`
+	<ul>
+	${x.name}<p>
+	</ul>
+	`
 	   // };
 
 	$(".js-album-result").append(albumItem);

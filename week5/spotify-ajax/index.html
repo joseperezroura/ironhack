@@ -1,37 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Spotify</title>
-	
-	<link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/styles.css">
+	<head>
+		<title>Spotify</title>	
+		<link rel="stylesheet" href="css/bootstrap.css">
+    	<link rel="stylesheet" href="css/styles.css">
 
-    <script src="js/jquery-3.1.1.js"></script>
-    <script src="js/app.js"></script>
+    	<script src="js/jquery-3.1.1.js"></script>
+    	<script src="js/app.js"></script>
+	</head>
 
-</head>
-<body class="container">
-<div class="jumbotron text-center">
-<h1>Spotify Artist Search</h1>
+	<body class="container">
+		<div class="jumbotron text-center">
+			<h1>Spotify Artist Search</h1>
+		</div>
+		<br>
+		<div>
+		<form class="js-artist-search-form form-group">
 
-</div>
+		<input type="text" class="form-control js-artist-search">
+		<button class="btn"><strong>Artist Search</strong></button>
+		</form>
+		</div>
 
- 
-<br>
-<div>
-<form class="js-artist-search-form form-group">
+		<div class="js-artist-result">
+		</div>
 
-<input type="text" class="form-control js-artist-search">
-<button class="btn"><strong>Artist Search</strong></button>
-</form>
-</div>
-
-<div class="js-artist-result">
-</div>
-
-
-
-
-
-</body>
+		<div class="js-album-result">
+		</div>
+	</body>
 </html>
