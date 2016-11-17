@@ -11,6 +11,8 @@ $(document).on("ready", function() {
 	});
 });
 
+// ========================================================================
+
 PokemonApp.Pokemon = class {
 		constructor (pokemonUri) {
 			this.apiUrl = pokemonUri;
@@ -45,7 +47,7 @@ PokemonApp.Pokemon = class {
 		$(".js-pkmn-spdefense").text(apiResult.sp_def)
 		$(".js-pkmn-speed").text(apiResult.speed)
 
-
+// ===================================================================
 		
 		if (apiResult.types.length === 2) {
 		// if array has 2 objects 
@@ -59,10 +61,15 @@ PokemonApp.Pokemon = class {
 
 		}
 
-		console.log(a)
+		// console.log(a)
 
 
 		$(".js-pkmn-type").text(a.join(', '))
+
+
+
+
+// =====================================================================
 
 		var x = apiResult.descriptions
 
@@ -72,8 +79,6 @@ PokemonApp.Pokemon = class {
 
 		x.forEach(function (y){
 			
-			
-
 			w = y.name.split("_")
 
 			if(parseInt(w[2]) > j){
@@ -86,8 +91,8 @@ PokemonApp.Pokemon = class {
 
 		});
 			
-		console.log("banana")
-		console.log(link)
+		// console.log("banana")
+		// console.log(link)
 			
 			$.ajax({
 				type: "GET",
@@ -103,12 +108,35 @@ PokemonApp.Pokemon = class {
 
 
 	PokemonApp.showPokemonDescription = function (apiResult) {
-		console.log("Pokemon API success!");
-		console.log(apiResult);
+		// console.log("Pokemon API success!");
+		// console.log(apiResult);
 	$(".js-pkmn-description").text(apiResult.description)
+	
+	console.log(apiResult)
+
 }
+//=================================================================== 
+
 	
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ====================================================================
 	PokemonApp.handleError = function (errorThang) {
 		console.log("API Error");
 		console.log(errorThang.responseText);
