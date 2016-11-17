@@ -38,6 +38,36 @@ PokemonApp.Pokemon = class {
 		$(".js-pkmn-number").text(`#${apiResult.pkdx_id}`)
 		$(".js-pkmn-height").text(apiResult.height)
 		$(".js-pkmn-weight").text(apiResult.weight)
+		$(".js-pkmn-hp").text(apiResult.hp)
+		$(".js-pkmn-attack").text(apiResult.attack)
+		$(".js-pkmn-defense").text(apiResult.defense)
+		$(".js-pkmn-spattack").text(apiResult.sp_atk)
+		$(".js-pkmn-spdefense").text(apiResult.sp_def)
+		$(".js-pkmn-speed").text(apiResult.speed)
+
+
+		
+		if (apiResult.types.length === 2) {
+		// if array has 2 objects 
+		
+		var a = [apiResult.types[0].name , apiResult.types[1].name]
+         
+        }
+		else {
+
+		var a = [apiResult.types[0].name]
+
+		}
+
+		console.log(a)
+
+
+		$(".js-pkmn-type").text(a.join(', '))
+
+
+
+
+
 
 		$(".js-pokemon-modal").modal("show");
 	};
