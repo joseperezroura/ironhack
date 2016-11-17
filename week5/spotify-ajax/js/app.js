@@ -28,8 +28,9 @@ artistInfo.artists.items.forEach(function (x){
 	// console.log(x.id)
 	if (x.images.length !== 0){
 
-	var artistItem = `	
-	<div>${x.name}<p>	
+	var artistItem = `
+		
+	<div class="col-sm-4">${x.name}<p>	
 	<img data-id="${x.id}" src="${x.images[0].url}" class="js-click"></div>`
 	$(".js-artist-result").append(artistItem);
 		};
@@ -55,12 +56,16 @@ albumInfo.items.forEach(function (x){
 	// console.log(x.id)
 	// if (x.images.length !== 0){
 	var albumItem = `
+	
 	<ul>
+	<li>
 	${x.name}<p>
+	</li>
 	</ul>
+	
 	`
 	   // };
-	$(".modal-body").append(albumItem);	
+	$(".js-artist-result").append(albumItem);	
     });
 };
 function handleError (errorThing) {
