@@ -60,7 +60,7 @@ albumInfo.items.forEach(function (x){
 	</ul>
 	`
 	   // };
-	$(".js-album-result").append(albumItem);	
+	$(".modal-body").append(albumItem);	
     });
 };
 function handleError (errorThing) {
