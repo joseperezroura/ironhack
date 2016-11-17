@@ -64,13 +64,50 @@ PokemonApp.Pokemon = class {
 
 		$(".js-pkmn-type").text(a.join(', '))
 
+		var x = apiResult.descriptions
 
+		var j = 0
 
+		var link
+
+		x.forEach(function (y){
+			
+			
+
+			w = y.name.split("_")
+
+			if(parseInt(w[2]) > j){
+
+			j = parseInt(w[2])
+
+			link = y.resource_uri
+		
+            }
+
+		});
+			
+		console.log("banana")
+		console.log(link)
+			
+			$.ajax({
+				type: "GET",
+				url: link,
+				success: PokemonApp.showPokemonDescription,
+				error: PokemonApp.handleError
+			});
 
 
 
 		$(".js-pokemon-modal").modal("show");
 	};
+
+
+	PokemonApp.showPokemonDescription = function (apiResult) {
+		console.log("Pokemon API success!");
+		console.log(apiResult);
+	$(".js-pkmn-description").text(apiResult.description)
+}
+	
 
 	PokemonApp.handleError = function (errorThang) {
 		console.log("API Error");
