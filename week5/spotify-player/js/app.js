@@ -3,7 +3,7 @@ console.log("App Running")
 $(document).ready(function () {
 $(".js-song-search-form").on("submit", getSong);
 $(".js-btn-play").on("click", playTheSong)
-
+$('.js-player').on('timeupdate', printTime);
 });
 
 function getSong (eventThing) {
@@ -64,6 +64,21 @@ function playTheSong(){
 	$(".js-btn-play").addClass("playing")
 };
 };
+
+// Define a function to print the player's current time
+function printTime () {
+  var current = $('.js-player').prop('currentTime');
+console.log(current)
+  $("progress").attr("value",current)
+}
+
+
+
+
+
+
+
+
 
 
 function handleError (errorThing) {
