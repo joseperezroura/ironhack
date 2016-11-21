@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Spotify Player</title>
 		<link rel="stylesheet" href="css/bootstrap.css">
     	<link rel="stylesheet" href="css/style.css">
 
     	<script src="js/jquery-3.1.1.js"></script>
     	<script src="js/app.js"></script>
 </head>
-<body class="container">
+<body>
+	<header>
+	<h1><center>Search for Spotify Songs</center></h1>
+	</header>
+	<div class="container main">
 	
+	
+	<form class="col-sm-12 js-song-search-form">
 	<div>
-	<form class="js-song-search-form form-inline">
-	<input type="text" class="form-control js-song-search"><button class="btn"><strong>Song Search</strong></button>
-	</form>
+	
+	<input type="text" class="form-control js-song-search">
+	<button class="btn"><strong>Song Search</strong></button>
 	</div>
-
+	</form>
+	
+	<div class="col-sm-12">
 	<div class="widget">
 		<div class="header">
 		<div class="btn-play disabled js-btn-play"></div>
@@ -30,13 +38,14 @@
 		</div>
 		</div>
 		<div>
-		<img class="js-cover cover" src="https://media.giphy.com/media/ku5EcFe4PNGWA/giphy.gif">
+		<img class="js-cover cover" src="https://media.giphy.com/media/4oMoIbIQrvCjm/giphy.gif">
 		
 		</div>
 		<div>
 		<audio class="js-player" src=""></audio>
 		</div>
-
-
+		</div>
+	</div>
+	</div>
 </body>
 </html>
