@@ -17,7 +17,17 @@ def show
 end
 
 
+def update
+	sandwich = Sandwich.find(params[:id])
+	sandwich.update(sandwich_params)
+	render json: sandwich 
+end
 
+def destroy
+	sandwich = Sandwich.find(params[:id])
+	sandwich.destroy
+	render json: sandwich 
+end
 
 
 private
