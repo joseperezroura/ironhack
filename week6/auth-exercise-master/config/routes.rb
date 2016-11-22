@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   get '/profile' => 'users#show'
-  get '/users' => 'users#index'
-
+  get '/users' => 'users#index' 
+  get 'login' => 'sessions#new' #displays login form
+  post 'login' => 'sessions#create' #log in
+  delete '/logout' => 'sessions#destroy' #log out
 end
