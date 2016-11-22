@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
 
 def new
-	render :new
+	if session[:user_id]
+		redirect_to "/"
+	else
+		render :new
+	end
 end
 
 def create
