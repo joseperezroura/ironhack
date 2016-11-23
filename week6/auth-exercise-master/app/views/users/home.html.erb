@@ -17,7 +17,12 @@
 <% if session[:user_id] %>
 
   <%= link_to "My profile", "/profile" %><br>
-  <%= link_to "All profiles", "/users" %><br>
+
+  <% if @current_user.role == "admin" %>
+  <%= link_to "All profiles", "/users" %><br> 
+  <%= link_to "Secrets", "/secret_gif" %><br> 
+  <% end %>
+
   <%= link_to "Logout", "/logout", method: "delete" %><br>
 
 <% else %>
