@@ -7,6 +7,13 @@
 <% end %>
 
 
+<% if flash[:admin_only] %>
+<p class="admin-only">
+<%= flash[:admin_only] %>
+</p>
+<% end %>
+
+
 <% if session[:user_id] %>
 
   <%= link_to "My profile", "/profile" %><br>

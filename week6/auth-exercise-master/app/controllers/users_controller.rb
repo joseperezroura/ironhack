@@ -7,13 +7,18 @@ class UsersController < ApplicationController
   end
 
   def index
-      if session[:user_id]
+      get_current_user
+      if session[:user_id] && @current_user.role == "admin"
       @users = User.all
-
+      
       render :index
+      elsif 
+      session[:user_id] && @current_user.role != "admin"
+      flash[:admin_only] = "Only administrators can see users"
+      redirect_to "/"
       else
-     flash[:need_to_login_message] = "You need to login to see the profile page."
-     redirect_to "/login"
+       flash[:need_to_login_message] = "You need to login to see the profile page."
+       redirect_to "/login"
     end
   end
 
