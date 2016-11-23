@@ -1,4 +1,8 @@
 <h1> Login </h1>
+<% if flash[:need_to_login_message] %>
+<p class="need-to-login"><%= flash[:need_to_login_message] %>
+</p>
+<% end %>
 
 <%= form_tag "/login" do %>
 	<div>
@@ -13,3 +17,4 @@
 
 	<%= button_tag "Login" %>
 	<% end %>
+
