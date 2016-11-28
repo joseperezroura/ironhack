@@ -1,0 +1,23 @@
+<h2>User Profile Page</h2>
+
+<h3> <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <%= @the_user.first_name %> <%=@the_user.last_name %></h3>
+
+<h3> Favorite Comics </h3>
+
+<ul>
+	<% @comics_list.each do |one_comic| %>
+	<li>
+		<h4> <%= one_comic.title %></h4>
+		<p>
+			Publisher:
+			<em> <%= one_comic.publisher %></em>
+
+
+		</p>
+	</li>
+<% end %>
+
+
+
+
+</ul>
