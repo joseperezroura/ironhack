@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
 def new
 	if session[:user_id]
-		flash[:login_success] = "You are already logged in"
+	
 		redirect_to "/"
 	else
 		render :new
