@@ -7,5 +7,5 @@ Rails.application.routes.draw do
  post "/text_inspections", to: "text_inspections#create"
 
  get "/asciis/new", to: "asciis#new"
- post "/asciis", to: "asciis#create"
+ # post "/asciis", to: "asciis#create"
 end

@@ -1,17 +1,29 @@
 <h1>Add a Contact</h1>
  
  <%= form_for @my_contact do |f| %>
+
+<div class="name">
  	<%= f.label :name %>
- 	<%= f.text_field :name %>
- 
+ 	: <%= f.text_area :name %>
+</div>
+
+<div class="address">
  	<%= f.label :address %>
- 	<%= f.text_area :address %>
+ 	: <%= f.text_area :address %>
+</div>
 
+<div class="email">
 	<%= f.label :email %>
- 	<%= f.text_area :email %>
+ 	: <%= f.text_area :email %>
+</div>
 
+<div class="phone">
  	<%= f.label :phone %>
- 	<%= f.text_area :phone %>
+ 	: <%= f.text_area :phone %>
+</div>
 
- 	<%= f.button %>
+<p>
+<%= f.button %>
+ 
+
  <% end %> 

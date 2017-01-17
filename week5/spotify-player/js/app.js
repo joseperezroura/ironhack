@@ -10,7 +10,7 @@ function getSong (eventThing) {
 	eventThing.preventDefault();
 
  var songInput = $(".js-song-search").val();
- console.log(songInput)
+ console.log(songInput);
 
  $.ajax({
 		type: "GET",
@@ -22,9 +22,9 @@ function getSong (eventThing) {
 };
 
 function displaySong(songInfo){
-	$( ".js-btn-play" ).removeClass( "disabled" )
+	$( ".js-btn-play" ).removeClass( "disabled" );
 
-console.log(songInfo)
+console.log(songInfo);
 
 // songTrack = songInfo.tracks.href
 
@@ -39,7 +39,7 @@ console.log(songArtistName)
 $(".js-song-artist").text(songArtistName);
 
 var songName = `${songInfo.tracks.items[0].name}`
-console.log(songName)
+console.log(songName);
 
 $(".js-song-title").text(songName);
 
@@ -55,13 +55,13 @@ function playTheSong(){
 
 	if ($(".js-btn-play").hasClass("playing")){
 
-	$(".js-player").trigger("pause")
-	$(".js-btn-play").removeClass("playing")
+	$(".js-player").trigger("pause");
+	$(".js-btn-play").removeClass("playing");
 }
      else {
 
-	$(".js-player").trigger("play")
-	$(".js-btn-play").addClass("playing")
+	$(".js-player").trigger("play");
+	$(".js-btn-play").addClass("playing");
 };
 };
 

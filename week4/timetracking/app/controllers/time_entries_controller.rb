@@ -1,4 +1,4 @@
-class TimeEntriesController < ApplicationController
+=class TimeEntriesController < ApplicationController
 
 	def index
 		@my_project = Project.find(params[:project_id])

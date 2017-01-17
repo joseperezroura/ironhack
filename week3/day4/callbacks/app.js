@@ -2,6 +2,8 @@
 
 // fs is built in
 var fs = require("fs");
+
+// read must be installed (npm install read)
 var read = require("read");
 
 

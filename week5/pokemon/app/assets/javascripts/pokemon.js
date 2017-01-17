@@ -113,7 +113,7 @@ PokemonApp.Pokemon = class {
 	$(".js-pkmn-description").text(apiResult.description)
 	
 	console.log(apiResult)
-
+	console.log(apiResult.sprites)
 }
 //=================================================================== 
 

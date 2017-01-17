@@ -21,5 +21,12 @@ randomPhrase();
 
 $(".js-phrases").on("click", randomPhrase);
 
- // $("body").append(`${x}`);
+ 
+
+
+
+
+
+
+
 });

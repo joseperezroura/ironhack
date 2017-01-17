@@ -59,7 +59,9 @@ $('#disappear').on('click', function(){
   $('.playable').fadeToggle(2000);
 });
 
-
+$('.unicorn-mode').on('click', function(){
+  $('.playable').animate(2000);
+});
 
 
 

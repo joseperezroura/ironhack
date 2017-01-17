@@ -10,6 +10,8 @@ chase () {
 bark () {
 	console.log(this.sound);
 	}
+
+
 }
 
 

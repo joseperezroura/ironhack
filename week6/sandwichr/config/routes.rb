@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-	root to: 'sandwich_views#index'
+  devise_for :users
+	root to: 'site#home'
 	resources :sandwiches, only: [:index, :show], controller: "sandwich_views"
 	scope "/api" do
 		resources :ingredients, except: [:new, :edit]
@@ -8,7 +9,3 @@ Rails.application.routes.draw do
 		delete "sandwiches/:id/ingredients/remove", to: "sandwiches#remove_ingredient"
 	end
 end
-
-
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.htmls
