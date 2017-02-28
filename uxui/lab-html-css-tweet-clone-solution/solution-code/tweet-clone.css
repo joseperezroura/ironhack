@@ -1,0 +1,104 @@
+body {
+  background: rgb(244, 248, 249);
+  font-family: Helvetica;
+  font-size: 14px;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#tweet {
+  background: rgb(255, 255, 255);
+  border: 1px solid rgb(255, 232, 237);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin: 40vh auto;
+  padding: 20px;
+  padding-bottom: 11.6px;
+  width: 500px;
+}
+
+#profile-picture,
+#profile-info,
+#profile-follow {
+  float: left;
+}
+
+#profile-picture {
+  width: 36px;
+}
+
+#profile-picture img {
+  width: 100%;
+}
+
+#profile-info {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 10px;
+  width: calc(100% - 148px);
+}
+
+#profile-info img {
+  max-height: 16px;
+}
+
+#profile-info #username {
+  color: rgb(104, 109, 129);
+  font-size: 14px;
+  font-weight: normal;
+}
+
+#profile-follow {
+  width: 92px;
+}
+
+#profile-follow button {
+  background: rgb(255, 255, 255);
+  border: 2px solid rgb(85, 172, 238);
+  border-radius: 4px;
+  color: rgb(85, 172, 238);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 4px 0;
+  outline: 0;
+  padding: 5px 10px;
+}
+
+#profile-follow button img {
+  max-height: 14px;
+}
+
+#tweet-content {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+#tweet-content p {
+  margin: 15px 0 5px;
+}
+
+#tweet-content .date {
+  color: rgb(101, 116, 127);
+  font-size: 14px;
+}
+
+#tweet-actions {
+  color: rgb(105, 120, 130);
+  font-size: 14px;
+}
+
+#tweet-actions #reply,
+#tweet-actions #retweet,
+#tweet-actions #favorite {
+  float: left;
+  margin: 14px 20px 0 0;
+}
+
+#tweet-actions img {
+  height: 12px;
+}
