@@ -1,0 +1,13 @@
+.red-background {
+  background-color: red;
+  height: 100px;
+}
+.latest-projects {
+  border-bottom: 1px solid gray;
+}
+.project-pic {
+  display: inline-block;
+}
+.top-menu {
+  height: 100px;
+}
