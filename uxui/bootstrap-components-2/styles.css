@@ -1,3 +1,8 @@
+@font-face { font-family: chunkfive; src: url('chunkfive/chunkfive.otf'); }
+body{
+  font-family: ChunkFive, sans-serif;
+}
+
 .center-content{
   padding: 0 17%;
 }
