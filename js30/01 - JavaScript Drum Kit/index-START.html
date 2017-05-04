@@ -70,6 +70,8 @@
 
   function removeTransition(e){
     console.log(e)
+    if(e.propertyName !== 'transition')return;
+
   };
 
   const keys = document.querySelectorAll('.key');
