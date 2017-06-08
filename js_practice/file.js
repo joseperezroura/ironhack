@@ -47,13 +47,10 @@ pizza.forEach(function(i){
 
 
 var numbers = [65, 44, 12, 4]
-
 var sum = numbers.reduce((total, amount) => total + amount)
 	console.log(sum)
-
 var avg = sum / numbers.length
-
-console.log (avg)	
+console.log(avg)	
 
 // In this example, Reduce accepts two parameters, the total and the current amount.
 // The reduce method cycles through each number in the array much like it would in a for-loop.
@@ -61,6 +58,35 @@ console.log (avg)
 // In this particular example, we want to add the current amount to the total.
 // The calculation is repeated for each amount in the array, but each time the current value changes to the next number in the array, moving right.
 // When there are no more numbers left in the array the method returns the total value.
+
+// <-------------------------javascript filter--------------------------->
+
+var ages = [32, 33, 12, 40];
+
+
+function overEighteen(value){
+	return value >= 18
+}
+
+filtered = ages.filter(overEighteen);
+
+
+
+console.log(filtered)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // <-------------javascript if else--------------------------------->
 
