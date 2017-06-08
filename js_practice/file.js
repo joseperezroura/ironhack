@@ -10,13 +10,13 @@
 
 // <----------for loop----------------------------------------->
 
-console.log("----------------------------")
+// console.log("----------------------------")
 
-for(i = 1; i < 100; i += 1){
-	console.log(i)
-}
+// for(i = 1; i < 100; i += 1){
+// 	console.log(i)
+// }
 
-console.log("----------------------------")
+// console.log("----------------------------")
 
 // <----------forEach loop------------------------------------->
 
@@ -98,7 +98,37 @@ console.log(filtered)
 
 console.log("----------------------------")
 
-// <-------------javascript if else--------------------------------->
+// <-------------------------javascript map---------------------------------->
+
+var ages = [21, 25, 17, 33]
+
+function overEighteen(num){
+	return num >= 18
+}
+
+var mapped = ages.map(overEighteen)
+
+console.log(mapped)
+
+console.log("----------------------------")
+
+var numbers = [1, 2, 3, 4];
+var newNumbers = [];
+
+for(var i = 0; i < numbers.length; i++) {
+    newNumbers[i] = numbers[i] * 2;
+}
+
+console.log("The doubled numbers are", newNumbers); // [2, 4, 6, 8]
+
+console.log("----------------------------")
+
+// var new_array = arr.map(callback[, thisArg])
+
+
+
+
+// <------------------------javascript if else--------------------------------->
 
 console.log("----------------------------")
 
