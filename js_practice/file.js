@@ -10,11 +10,17 @@
 
 // <----------for loop----------------------------------------->
 
+console.log("----------------------------")
+
 for(i = 1; i < 100; i += 1){
 	console.log(i)
 }
 
+console.log("----------------------------")
+
 // <----------forEach loop------------------------------------->
+
+console.log("----------------------------")
 
 var pizza = ["cheese", "roni", "mushroom", "bacon"]
 
@@ -23,6 +29,7 @@ pizza.forEach(function(i){
 	console.log(blah)
 });
 
+console.log("----------------------------")
 
 // <----------reduce------------------------------------------->
 
@@ -47,10 +54,25 @@ pizza.forEach(function(i){
 
 
 var numbers = [65, 44, 12, 4]
-var sum = numbers.reduce((total, amount) => total + amount)
-	console.log(sum)
-var avg = sum / numbers.length
-console.log(avg)	
+// var sum = numbers.reduce((total, amount) => total + amount)
+// 	console.log(sum)
+// var avg = sum / numbers.length
+// console.log(avg)	
+console.log("----------------------------")
+
+function sum(total, amount){
+	return total + amount
+}
+
+var reduced = numbers.reduce(sum)
+
+console.log(reduced)
+
+var avg = reduced / numbers.length
+
+console.log(avg)
+
+console.log("----------------------------")
 
 // In this example, Reduce accepts two parameters, the total and the current amount.
 // The reduce method cycles through each number in the array much like it would in a for-loop.
@@ -61,6 +83,8 @@ console.log(avg)
 
 // <-------------------------javascript filter--------------------------->
 
+console.log("----------------------------")
+
 var ages = [32, 33, 12, 40];
 
 
@@ -68,33 +92,26 @@ function overEighteen(value){
 	return value >= 18
 }
 
-filtered = ages.filter(overEighteen);
-
-
+var filtered = ages.filter(overEighteen);
 
 console.log(filtered)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("----------------------------")
 
 // <-------------javascript if else--------------------------------->
 
-// var person = alert("Please enter your name");
+console.log("----------------------------")
 
-// if (person === "" || person === null) {
-//     prompt("Please enter your name to continue")
-// } else {
-//     txt = " Hi " + person + " how are you today? "
-// }
+var ages = [32, 33, 12, 40];
+
+ages.forEach(function(x){
+	if(x >= 18){
+		console.log(x)}
+	else{
+		console.log(" You're " + x + " and not old enough to enter... ")
+	}
+});
+
+console.log("----------------------------")
+
 
