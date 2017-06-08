@@ -1,3 +1,10 @@
-var exampleArray = [2, 5, 9, 10];
-var results = process(exampleArray);
-console.log(results)
+
+
+
+var person = prompt("Please enter your name");
+
+if (person === "" || person === null) {
+    prompt("Please enter your name to continue")
+} else {
+    txt = " Hi " + person + " how are you today? "
+}
